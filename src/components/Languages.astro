@@ -1,0 +1,25 @@
+---
+import { siteConfig } from "../config";
+const hasLanguages = siteConfig.languages && siteConfig.languages.length > 0;
+---
+
+{hasLanguages && (
+  <section id="languages" aria-labelledby="languages-heading" class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-4">
+        <h2 id="languages-heading" class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+          Languages
+        </h2>
+        <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${siteConfig.accentColor}`} />
+      </div>
+      <dl class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {siteConfig.languages.map((language) => (
+          <div class="bg-gray-50 rounded-xl border border-gray-200 p-4 sm:p-6">
+            <dt class="text-lg sm:text-xl font-semibold text-gray-900">{language.name}</dt>
+            <dd class="mt-2 text-sm sm:text-base text-gray-600">{language.proficiency}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+)}
