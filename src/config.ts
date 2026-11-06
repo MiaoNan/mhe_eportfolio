@@ -94,7 +94,7 @@ export const siteConfig = {
     { name: "Chinese", proficiency: "Native" },
     { name: "English", proficiency: "IELTS 7" },
     { name: "Japanese", proficiency: "JLPT N2" },
-    { name: "French", proficiency: "Studying" },
+    { name: "French", proficiency: "Elementary Proficiency" },
   ],
   education: [
     {
