@@ -44,7 +44,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                       GPA: {edu.gpa}
                     </p>
                   )}
-                  <ul class="space-y-2">
+                  {edu.achievements.length > 0 && (
+                    <ul class="space-y-2">
                     {edu.achievements.map((achievement) => (
                       <li class="flex items-start">
                         <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 mr-3 flex-shrink-0" />
@@ -53,7 +54,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                         </span>
                       </li>
                     ))}
-                  </ul>
+                    </ul>
+                  )}
                   {edu.courses && edu.courses.length > 0 && (
                     <div class="mt-5">
                       <h4 class="text-sm font-semibold text-gray-900 mb-3">Selected coursework</h4>

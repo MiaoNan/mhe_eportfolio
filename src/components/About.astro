@@ -23,17 +23,25 @@ import { siteConfig } from "../config";
           {siteConfig.aboutMe}
         </p>
 
-        <div class="pt-4">
-          <div class="flex flex-wrap gap-3">
-            {
-              siteConfig.skills.map((skill) => (
-                <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
-                  {skill}
-                </span>
-              ))
-            }
+        {siteConfig.skills.length > 0 && (
+          <div class="pt-4" aria-labelledby="skills-heading">
+            <h3 id="skills-heading" class="mb-5 text-xl font-semibold text-gray-900">Skills</h3>
+            <dl class="divide-y divide-gray-200 border-y border-gray-200">
+              {siteConfig.skills.map((group) => (
+                <div class="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] gap-3 sm:gap-6 py-5">
+                  <dt class="text-sm sm:text-base font-semibold text-gray-900">{group.category}</dt>
+                  <dd>
+                    <ul class="flex flex-wrap gap-2">
+                      {group.technologies.map((technology) => (
+                        <li class="rounded-md bg-gray-100 px-2.5 py-1 text-sm text-gray-700">{technology}</li>
+                      ))}
+                    </ul>
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
-        </div>
+        )}
       </div>
     </div>
   </div>

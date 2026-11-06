@@ -3,20 +3,40 @@ export const siteConfig = {
   title: "Applied AI / Machine Learning Engineer",
   description:
     "Michael He — applied AI and machine learning engineer in Ottawa, building multi-agent systems, RAG applications, and full-stack AI tools.",
+  location: "Ottawa, Ontario, Canada",
+  heroDescription:
+    "I build practical AI tools, from multi-agent debugging systems to retrieval-augmented applications. My experience spans machine learning research and full-stack development, including a software engineering co-op at Ciena.",
+  resume: "resume.pdf",
   accentColor: "#1d4ed8",
   social: {
     email: "mhe41981@gmail.com",
     linkedin: "https://www.linkedin.com/in/xinnan-he-827435274/",
-    twitter: "",
     github: "https://github.com/MiaoNan",
   },
   aboutMe:
     "I'm an applied AI and machine learning engineer based in Ottawa, Ontario, with a Master of Applied Data Science from the University of Victoria. At Ciena, I built multi-agent debugging workflows, retrieval-augmented applications, and internal tools that helped engineers investigate failed tests. My background combines machine learning research with hands-on Python, React, and API development. I enjoy turning complex data and engineering problems into practical tools people can use.",
   skills: [
-    "Python", "JavaScript", "SQL", "R", "PyTorch", "scikit-learn",
-    "Google ADK", "Multi-agent Systems", "RAG", "MCP Integration",
-    "Milvus", "Neo4j", "spaCy", "React", "FastAPI", "Flask",
-    "REST APIs", "Git", "Linux", "Docker",
+    {
+      category: "AI & LLM Systems",
+      technologies: ["Google ADK", "Multi-Agent Systems", "RAG", "MCP"],
+    },
+    {
+      category: "ML & Data",
+      technologies: ["PyTorch", "spaCy", "Milvus", "Neo4j", "R"],
+    },
+    {
+      category: "Backend & APIs",
+      technologies: ["Python", "FastAPI", "Flask", "REST APIs"],
+    },
+    {
+      category: "Frontend",
+      technologies: ["React", "JavaScript"],
+    },
+    {
+      category: "Infrastructure & Tools",
+      technologies: ["Linux", "Docker", "Git"],
+    },
+    // Restore SQL and scikit-learn when concrete usage examples are added to Experience or Projects.
   ],
   // Projects are hidden for now. Uncomment the saved entries below to restore them.
   projects: [
@@ -33,11 +53,20 @@ export const siteConfig = {
       company: "Ciena · Ottawa, Canada",
       title: "Software Engineer and Tools Developer Co-op",
       dateRange: "Sep 2025 – Aug 2026",
+      impactHighlights: [
+        { value: "4", label: "Product Teams" },
+        { value: "~20", label: "Engineers Supported" },
+        { value: "100+", label: "Failed Cases Analyzed" },
+      ],
+      achievement:
+        "Runner-up among more than 200 teams at the 2026 Ciena AI Hackathon. Our five-person team, Causal Chain, built an AI-powered debugging pipeline.",
       bullets: [
-        "Built multi-agent debugging workflows and React/Python AI applications used by approximately 20 testing and design engineers across four product teams to analyze over 100 failed test cases.",
-        "Connected six AI agents to React interfaces through FastAPI and Flask REST endpoints; deployed and maintained applications on Linux with Gunicorn, logging, and process management.",
+        "Built Google ADK multi-agent debugging workflows with Milvus-based RAG and integrated an existing MCP Jira-writing tool; React/JavaScript and Python applications supported approximately 20 engineers across four product teams in analyzing over 100 failed test cases.",
+        "Connected 6 AI agents to React interfaces through FastAPI and Flask REST endpoints; deployed and maintained applications on Linux with Gunicorn, logging, and process management.",
         "Prepared domain-specific LLM data from approximately 10,000 Confluence pages, filtered approximately 20% using document metadata, and converted approximately 3,000 embedded images to text with Qwen3-6B.",
         "Created reusable image-to-text, cleaning, and question-answer generation tools used by a teammate to prepare 30 product manuals across four products.",
+        "Built an experimental Neo4j knowledge graph from approximately 100,000 historical Jira issues using spaCy entity and relationship extraction; the experiment was not deployed.",
+        "Used Git for development and PR review, and Docker and Portainer for operational tasks alongside Linux application deployment.",
       ],
     },
     {
@@ -71,34 +100,22 @@ export const siteConfig = {
     {
       school: "University of Victoria",
       // Unit-weighted GPA: 135.5 grade points / 16.5 graded units; co-op excluded.
-      gpa: "8.21 / 9.0 (calculated from graded coursework)",
+      gpa: "8.21 / 9.0",
       degree: "Master of Applied Data Science",
       dateRange: "Sep 2024 – Aug 2026",
       courses: [
         "Optimization for Machine Learning",
         "Systems for Massive Datasets",
         "Deep Reinforcement Learning",
-        "Algorithms and Data Models",
-        "Data Analysis and Pattern Recognition",
-        "Data Mining",
       ],
-      achievements: [
-        "Completed a Ciena software engineering and tools development co-op in Ottawa.",
-      ],
+      achievements: [],
     },
     {
       school: "Hohai University",
       gpa: "4.42 / 5.0",
       degree: "Bachelor of Computer Science and Technology",
       dateRange: "Sep 2017 – Jun 2021",
-      courses: [
-        "Data Structure",
-        "Design and Analysis of Algorithms",
-        "Operating System",
-        "Software Engineering",
-        "Principles of Database",
-        "Pattern Recognition",
-      ],
+      courses: [],
       achievements: [
         "Academic Excellence Scholarship, 2018 — top 10% of class.",
       ],
