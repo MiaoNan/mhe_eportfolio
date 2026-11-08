@@ -1,11 +1,11 @@
 export const siteConfig = {
   name: "Michael He",
-  title: "Applied AI / Machine Learning Engineer",
+  title: "Applied AI & Software Engineer",
   description:
-    "Michael He — applied AI and machine learning engineer in Ottawa, building multi-agent systems, RAG applications, and full-stack AI tools.",
+    "Michael He — Applied AI & Software Engineer in Ottawa, building AI-powered tools with LLM agents, retrieval systems, and production software.",
   location: "Ottawa, Ontario, Canada",
   heroDescription:
-    "I build practical AI tools, from multi-agent debugging systems to retrieval-augmented applications. My experience spans machine learning research and full-stack development, including a software engineering co-op at Ciena.",
+    "I build AI-powered tools that combine LLM agents, retrieval systems, and production software to solve real engineering problems.",
   resume: "resume.pdf",
   accentColor: "#1d4ed8",
   social: {
@@ -13,16 +13,19 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/xinnan-he-827435274/",
     github: "https://github.com/MiaoNan",
   },
-  aboutMe:
-    "I'm an applied AI and machine learning engineer based in Ottawa, Ontario, with a Master of Applied Data Science from the University of Victoria. At Ciena, I built multi-agent debugging workflows, retrieval-augmented applications, and internal tools that helped engineers investigate failed tests. My background combines machine learning research with hands-on Python, React, and API development. I enjoy turning complex data and engineering problems into practical tools people can use.",
+  aboutMe: [
+    "I'm Michael He, an Applied AI & Software Engineer based in Canada, with a Master of Applied Data Science from the University of Victoria. My background combines machine learning research with software engineering experience at Ciena.",
+    "I'm interested in how LLM agents, retrieval systems, and backend services work together to solve practical problems. I enjoy connecting AI capabilities to reliable software, making complex information easier to use, and building tools that support everyday engineering work.",
+    "Outside work, I enjoy photography, travel, and learning languages. Through Postcrossing, I exchange postcards with people around the world—a small way to discover different places, perspectives, and everyday stories.",
+  ],
   skills: [
     {
       category: "AI & LLM Systems",
-      technologies: ["Google ADK", "Multi-Agent Systems", "RAG", "MCP"],
+      technologies: ["Multi-Agent Systems", "RAG", "Google ADK", "MCP"],
     },
     {
       category: "ML & Data",
-      technologies: ["PyTorch", "spaCy", "Milvus", "Neo4j", "R"],
+      technologies: ["PyTorch", "scikit-learn", "spaCy", "Milvus", "Neo4j"],
     },
     {
       category: "Backend & APIs",
@@ -34,9 +37,8 @@ export const siteConfig = {
     },
     {
       category: "Infrastructure & Tools",
-      technologies: ["Linux", "Docker", "Git"],
+      technologies: ["Linux", "Docker", "Git", "SQL"],
     },
-    // Restore SQL and scikit-learn when concrete usage examples are added to Experience or Projects.
   ],
   // Projects are hidden for now. Uncomment the saved entries below to restore them.
   projects: [
@@ -53,20 +55,33 @@ export const siteConfig = {
       company: "Ciena · Ottawa, Canada",
       title: "Software Engineer and Tools Developer Co-op",
       dateRange: "Sep 2025 – Aug 2026",
+      impactContext:
+        "Impact of the AI Debugging Pipeline and related tools I developed at Ciena.",
       impactHighlights: [
         { value: "4", label: "Product Teams" },
         { value: "~20", label: "Engineers Supported" },
         { value: "100+", label: "Failed Cases Analyzed" },
       ],
-      achievement:
-        "Runner-up among more than 200 teams at the 2026 Ciena AI Hackathon. Our five-person team, Causal Chain, built an AI-powered debugging pipeline.",
+      achievement: {
+        title: "Runner-up — Ciena AI Hackathon 2026",
+        description: "Runner-up among 200+ participating teams in Ciena's AI Hackathon.",
+      },
       bullets: [
-        "Built Google ADK multi-agent debugging workflows with Milvus-based RAG and integrated an existing MCP Jira-writing tool; React/JavaScript and Python applications supported approximately 20 engineers across four product teams in analyzing over 100 failed test cases.",
-        "Connected 6 AI agents to React interfaces through FastAPI and Flask REST endpoints; deployed and maintained applications on Linux with Gunicorn, logging, and process management.",
+        "Built Google ADK multi-agent debugging workflows with Milvus-based RAG and integrated an existing MCP Jira-writing tool into React/JavaScript and Python applications.",
+        "Developed and maintained 2 React/Python applications for state-dump log analysis and AI debugging pipeline agents, integrating frontend and backend services and deploying them on Linux with Gunicorn.",
         "Prepared domain-specific LLM data from approximately 10,000 Confluence pages, filtered approximately 20% using document metadata, and converted approximately 3,000 embedded images to text with Qwen3-6B.",
         "Created reusable image-to-text, cleaning, and question-answer generation tools used by a teammate to prepare 30 product manuals across four products.",
-        "Built an experimental Neo4j knowledge graph from approximately 100,000 historical Jira issues using spaCy entity and relationship extraction; the experiment was not deployed.",
-        "Used Git for development and PR review, and Docker and Portainer for operational tasks alongside Linux application deployment.",
+        "Optimized RAG pipelines within AI agent applications using reranking, Drain3 log parsing, metadata enrichment, and Neo4j-based knowledge graphs to improve Jira matching and log relevance.",
+        "Used Git for development and PR review, and Docker and Portainer for operational tasks.",
+      ],
+    },
+    {
+      company: "University of Victoria",
+      title: "Teaching Assistant — ECE310: Digital Signal Processing",
+      dateRange: "Jan 2025 – Apr 2025",
+      bullets: [
+        "Graded assignments for ECE310: Digital Signal Processing.",
+        "Answered students' questions about course concepts and assignments.",
       ],
     },
     {
@@ -74,8 +89,7 @@ export const siteConfig = {
       title: "Graduate Student Researcher",
       dateRange: "Sep 2021 – Sep 2023",
       bullets: [
-        "Conducted two years of machine learning research in cross-domain object detection and Transformer-based text modeling.",
-        "Implemented and evaluated domain adaptation changes to Faster R-CNN in PyTorch.",
+        "Adapted a PyTorch Faster R-CNN model to improve object detection across real, foggy, and simulated street scenes.",
         "Collected and preprocessed approximately 20,000 historical book titles and trained a Transformer model to predict next-title keywords using vector representations and cosine similarity.",
       ],
     },
@@ -84,17 +98,16 @@ export const siteConfig = {
       title: "Data Analyst Intern",
       dateRange: "Dec 2020 – Feb 2021",
       bullets: [
-        "Built and trained a PyTorch Structure-Attribute Transformer with graph and GAN components to impute gene expression values across approximately 40 tissue regions and 20,000 features.",
-        "Preprocessed experimental data and delivered an imputed gene expression table to the bioinformatics team for downstream analysis.",
+        "Preprocessed experimental data and trained a PyTorch model to fill missing gene expression values across approximately 40 tissue regions and 20,000 features; delivered the completed table to the bioinformatics team for downstream analysis.",
         "Created Python and R visualizations of gene and transcript distributions.",
       ],
     },
   ],
   languages: [
-    { name: "Chinese", proficiency: "Native" },
-    { name: "English", proficiency: "IELTS 7" },
-    { name: "Japanese", proficiency: "JLPT N2" },
-    { name: "French", proficiency: "Elementary Proficiency" },
+    { name: "Chinese", nativeName: "中文", code: "zh", proficiency: "Native" },
+    { name: "English", nativeName: "English", code: "en", proficiency: "IELTS 7" },
+    { name: "Japanese", nativeName: "日本語", code: "ja", proficiency: "JLPT N2" },
+    { name: "French", nativeName: "Français", code: "fr", proficiency: "Elementary Proficiency" },
   ],
   education: [
     {

@@ -75,8 +75,16 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             href={`${import.meta.env.BASE_URL}/${siteConfig.resume}`}
             target="_blank"
             rel="noopener noreferrer"
-            class="text-sm font-medium text-gray-600 hover:text-gray-900 self-center"
-          >Résumé ↗</a>
+            aria-label="Résumé"
+            title="Résumé"
+            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
+            style={`--accent-color: ${siteConfig.accentColor}`}
+          >
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6M8 13h8M8 17h5" />
+            </svg>
+          </a>
           <a
             href={siteConfig.social.github}
             target="_blank"
