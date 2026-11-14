@@ -67,7 +67,7 @@ export const siteConfig = {
         description: "Runner-up among 200+ participating teams in Ciena's AI Hackathon.",
       },
       bullets: [
-        "Built Google ADK multi-agent debugging workflows with Milvus-based RAG and integrated an existing MCP Jira-writing tool into React/JavaScript and Python applications.",
+        "Developed an orchestration agent for a deployed 10-agent AI debugging system, coordinating sequential and parallel execution, aggregating and evaluating results, handling errors, and creating Jira issues through MCP.",
         "Developed and maintained 2 React/Python applications for state-dump log analysis and AI debugging pipeline agents, integrating frontend and backend services and deploying them on Linux with Gunicorn.",
         "Prepared domain-specific LLM data from approximately 10,000 Confluence pages, filtered approximately 20% using document metadata, and converted approximately 3,000 embedded images to text with Qwen3-6B.",
         "Created reusable image-to-text, cleaning, and question-answer generation tools used by a teammate to prepare 30 product manuals across four products.",
